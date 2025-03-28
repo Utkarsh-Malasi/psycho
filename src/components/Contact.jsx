@@ -1,76 +1,101 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './Header'
+import { FaMapMarkerAlt, FaAddressBook, FaPhone, FaEnvelope, FaClock, FaArrowRight, FaHeart } from 'react-icons/fa'
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+  
   return (
     <>
     <Header />
       
-    <div className="min-h-screen mt-4">
-      <h1 className="text-4xl font-bold text-black text-center py-8 px-4 bg-white/70 backdrop-blur-sm rounded-lg max-w-4xl mx-auto">We Believe In Connecting Youself With The Better You</h1>
-      <p className="text-center text-black  max-w-4xl mx-auto font-bold px-4 mb-8 bg-green-300/50 backdrop-blur-sm rounded-lg mt-4">
-        We are a team of experienced  professionals who are dedicated to providing the best possible service to our clients.
+    <div className="min-h-screen mt-4 bg-gradient-to-br from-white via-blue-50 to-purple-50 px-4 py-6 sm:py-8 rounded-xl shadow-xl">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center py-6 sm:py-8 px-4 bg-white rounded-lg max-w-4xl mx-auto shadow-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600">We Believe In Connecting Yourself With The Better You</h1>
+      <p className="text-center text-gray-700 max-w-4xl mx-auto font-medium px-4 sm:px-6 py-3 sm:py-4 mb-6 sm:mb-8 bg-white rounded-lg mt-4 sm:mt-6 shadow-md border border-purple-100 leading-relaxed text-base sm:text-lg">
+        We are a team of experienced professionals dedicated to providing the best possible mental health services to our clients. Your journey to emotional well-being starts with a simple connection.
       </p>
-      <div className="container mx-auto px-4 py-8 ">
-        <div className="max-w-4xl mx-auto bg-gray-400/95 backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-8">
-          <div className="grid grid-cols-1 gap-8">
+      <div className="container mx-auto px-4 py-6 sm:py-8">
+        <div className={`max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-4 sm:p-6 md:p-8 border border-purple-100 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="grid grid-cols-1 gap-6 sm:gap-8">
             <div>
-              <h2 className="text-4xl font-semibold text-black text-center mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="bg-gray-50 p-4 rounded-lg ">
-                  <h3 className="text-lg font-semibold mb-2 text-black flex items-center">
-                    <i className="fas fa-map-marker-alt mr-2 text-blue-600"></i>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Get in Touch</h2>
+              <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6 sm:mb-8 mx-auto"></div>
+              <div className="space-y-4 sm:space-y-6">
+                <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
+                  <h3 className="text-lg font-semibold mb-2 sm:mb-3 text-purple-800 flex items-center">
+                    <FaMapMarkerAlt className="mr-2 sm:mr-3 text-purple-600" />
                     Office Address
                   </h3>
-                  <p className="text-gray-900 text-sm sm:text-base pl-7">
-                
+                  <p className="text-gray-700 text-sm sm:text-base md:text-lg pl-6 sm:pl-9 leading-relaxed">
                     Mussoorie, Uttarakhand<br />
                     India - 248179
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg ">
-                  <h3 className="text-lg font-semibold mb-2 text-black flex items-center">
-                    <i className="fas fa-address-book mr-2 text-blue-600"></i>
+                <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
+                  <h3 className="text-lg font-semibold mb-2 sm:mb-3 text-purple-800 flex items-center">
+                    <FaAddressBook className="mr-2 sm:mr-3 text-purple-600" />
                     Contact Info
                   </h3>
-                  <div className="text-gray-800 text-sm sm:text-base pl-7 space-y-2">
-                    <a href="tel:+918279793224" className="flex items-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-fit">
-                      <i className="fas fa-phone mr-2"></i>
+                  <div className="text-gray-700 text-sm sm:text-base md:text-lg pl-6 sm:pl-9 space-y-3 sm:space-y-4">
+                    <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 w-fit">
+                      <FaPhone className="mr-2 sm:mr-3 animate-pulse" />
                       Call Us: +91 8279793224
                     </a>
-                    <a href="mailto:rekhmanottam@gmail.com" className="flex items-center bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition w-fit">
-                      <i className="fas fa-envelope mr-2"></i>
-                      Email Us : rekhmanottam@gmail.com
+                    <a href="mailto:rekhmanottam@gmail.com" className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 w-fit">
+                      <FaEnvelope className="mr-2 sm:mr-3" />
+                      Email Us: rekhmanottam@gmail.com
                     </a>
                   </div>
                 </div>
 
-               
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-2 text-black flex items-center">
-                    <i className="far fa-clock mr-2 text-blue-600"></i>
-                    Business Hours
+                <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
+                  <h3 className="text-lg font-semibold mb-2 sm:mb-3 text-purple-800 flex items-center">
+                    <FaClock className="mr-2 sm:mr-3 text-purple-600" />
+                    Working Hours
                   </h3>
-                  <div className="text-gray-800 text-sm sm:text-base pl-7">
-                    <p className="flex items-center mb-1">
-                      <span className="font-medium w-32">Monday - Friday:</span>
-                      <span>9:00 AM - 6:00 PM</span>
-                    </p>
-                    <p className="flex items-center mb-1">
-                      <span className="font-medium w-32">Saturday:</span>
-                      <span>10:00 AM - 4:00 PM</span>
-                    </p>
-                    <p className="flex items-center">
-                      <span className="font-medium w-32">Sunday:</span>
-                      <span>Closed</span>
-                    </p>
+                  <div className="text-gray-700 text-sm sm:text-base md:text-lg pl-6 sm:pl-9 space-y-1 sm:space-y-2">
+                    <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                    <p>Saturday: 10:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed (Emergency services available)</p>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102 border-2 border-white relative overflow-hidden">
+              <div className="absolute -right-12 -top-12 w-24 h-24 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -left-12 -bottom-12 w-24 h-24 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+              
+              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white flex items-center justify-center">
+                <FaHeart className="mr-2 text-pink-200 animate-pulse" />
+                Special Offer
+              </h2>
+              
+              <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-inner mb-4">
+                <h3 className="text-xl font-semibold text-center text-purple-800 mb-2">FREE 10-Minute Consultation Call</h3>
+                <p className="text-gray-700 text-center mb-3">
+                  Take the first step toward your mental well-being journey. Connect with our experts for a complimentary 10-minute consultation to discuss your needs.
+                </p>
+                <div className="flex justify-center">
+                  <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                    <FaArrowRight className="mr-2 animate-bounce" />
+                    BOOK NOW
+                  </a>
+                </div>
+              </div>
+              
+              <p className="text-white text-center text-sm italic">*Limited time offer. Subject to availability.</p>
+            </div>
 
             <div>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Send Us a Message</h2>
+              <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6 sm:mb-8 mx-auto"></div>
+              
+             
+                  
             </div>
           </div>
         </div>
