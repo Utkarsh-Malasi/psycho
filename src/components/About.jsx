@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import founderImage from '../images/founder.jpg' // You'll need to add this image to your images folder
+import founderImageJpg from '../images/founder.jpg'
+import founderImageWebp from '../images/founder.webp' // Modern image format for better performance
 import Header from './Header'
-import { FaAward, FaCertificate, FaBrain, FaUsers, FaHandHoldingHeart, FaGraduationCap } from 'react-icons/fa'
+import { FaAward, FaCertificate, FaBrain, FaUsers, FaHandHoldingHeart, FaGraduationCap, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,11 +34,18 @@ export default function About() {
               <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 animate-pulse"></div>
-                  <img 
-                    src={founderImage} 
-                    alt="Sneha Malasi - Founder and Counseling Psychologist specializing in mental health therapy" 
-                    className="relative w-36 h-36 sm:w-48 sm:h-48 rounded-full object-cover shadow-lg border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-500"
-                  />
+                  <picture>
+                    <source srcSet={founderImageWebp} type="image/webp" />
+                    <source srcSet={founderImageJpg} type="image/jpeg" /> 
+                    <img 
+                      src={founderImageJpg} 
+                      alt="Sneha Malasi - Founder and Counseling Psychologist specializing in mental health therapy" 
+                      className="relative w-36 h-36 sm:w-48 sm:h-48 rounded-full object-cover shadow-lg border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-500"
+                      width="192"
+                      height="192"
+                      loading="lazy"
+                    />
+                  </picture>
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Sneha Malasi</h3>
                 <p className="text-gray-700 text-xs sm:text-sm mb-2 font-medium">Founder & CEO Of Rekhmanottam</p>
@@ -71,7 +79,7 @@ export default function About() {
                 <FaGraduationCap className="text-purple-600 text-xl sm:text-2xl" />
                 <h3 className="text-lg sm:text-xl font-semibold text-purple-800">Education</h3>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base">Masters in Clinical Psychology with specialization in cognitive behavioral therapy and mindfulness-based interventions.</p>
+              <p className="text-gray-700 text-sm sm:text-base">Masters degree in Psychology, equipped  in-depth knowledge of human behavior, mental processes, and emotional well-being</p>
             </div>
             
             <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
@@ -79,7 +87,7 @@ export default function About() {
                 <FaCertificate className="text-purple-600 text-xl sm:text-2xl" />
                 <h3 className="text-lg sm:text-xl font-semibold text-purple-800">Certifications</h3>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base">Licensed Clinical Psychologist with additional certifications in trauma-informed care and anxiety treatment methodologies.</p>
+              <p className="text-gray-700 text-sm sm:text-base">Licensed Life Member of Counsellors Counsil Of India (CRN8826415)</p>
             </div>
             
             <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
@@ -87,7 +95,7 @@ export default function About() {
                 <FaAward className="text-purple-600 text-xl sm:text-2xl" />
                 <h3 className="text-lg sm:text-xl font-semibold text-purple-800">Experience</h3>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base">Over 5 years of clinical experience working with diverse populations and addressing a wide range of mental health concerns.</p>
+              <p className="text-gray-700 text-sm sm:text-base">Over 5 years of  experience working with diverse populations and addressing a wide range of mental health concerns.</p>
             </div>
             
             <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
@@ -96,6 +104,31 @@ export default function About() {
                 <h3 className="text-lg sm:text-xl font-semibold text-purple-800">Client Success</h3>
               </div>
               <p className="text-gray-700 text-sm sm:text-base">Helped hundreds of clients overcome anxiety, depression, and trauma through personalized therapeutic approaches.</p>
+            </div>
+          </div>
+          
+          {/* Social Media Integration - SEO Enhancement */}
+          <div className="mt-8 bg-white rounded-lg p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-purple-700">Connect With Us</h2>
+            <p className="text-gray-700 text-sm sm:text-base mb-4">Follow us on social media to stay updated with our latest articles, events, and mental health tips.</p>
+            
+            <div className="flex justify-center gap-4 sm:gap-6">
+              <a href="https://www.instagram.com/rekhmanottam" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-600 text-white hover:scale-110 transition-transform duration-300">
+                <FaInstagram className="text-xl" />
+              </a>
+              <a href="https://www.facebook.com/rekhmanottam" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white hover:scale-110 transition-transform duration-300">
+                <FaFacebookF className="text-xl" />
+              </a>
+              <a href="https://www.twitter.com/rekhmanottam" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-400 text-white hover:scale-110 transition-transform duration-300">
+                <FaTwitter className="text-xl" />
+              </a>
+              <a href="https://www.linkedin.com/company/rekhmanottam" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn" className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white hover:scale-110 transition-transform duration-300">
+                <FaLinkedinIn className="text-xl" />
+              </a>
+            </div>
+            
+            <div className="mt-4 text-center text-gray-600 text-sm">
+              <p>Share your experience with us using <span className="font-semibold text-purple-600">#RekhmanottamWellness</span></p>
             </div>
           </div>
         </div>

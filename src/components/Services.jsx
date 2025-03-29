@@ -106,7 +106,7 @@ const Services = () => {
     Learn practical techniques to stay present, reduce stress, and enhance emotional well-being through mindfulness practices integrated with traditional mental health therapy.
   </p>
   <div className="flex justify-center">
-    <a href="https://www.yourdictionary.com/articles/basic-psychology-terms-meanings?search=mindfulness+training" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm" target="_blank" rel="noopener noreferrer">
+    <a href="/services/mindfulness" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm">
       Learn more <FaArrowRight className="text-xs sm:text-sm" />
     </a>
   </div>
@@ -121,7 +121,7 @@ const Services = () => {
     Comprehensive strategies to identify stressors and develop effective coping mechanisms for improved emotional well-being and mental health in daily life.
   </p>
   <div className="flex justify-center">
-    <a href="https://www.yourdictionary.com/articles/basic-psychology-terms-meanings?search=stress+management" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm" target="_blank" rel="noopener noreferrer">
+    <a href="/services/stress-management" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm">
       Learn more <FaArrowRight className="text-xs sm:text-sm" />
     </a>
   </div>
@@ -136,7 +136,7 @@ const Services = () => {
     Specialized therapy for various anxiety disorders, providing tools and techniques to manage symptoms and improve overall emotional well-being.
   </p>
   <div className="flex justify-center">
-    <a href="https://www.yourdictionary.com/articles/basic-psychology-terms-meanings?search=anxiety+treatment" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm" target="_blank" rel="noopener noreferrer">
+    <a href="/services/anxiety-treatment" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm">
       Learn more <FaArrowRight className="text-xs sm:text-sm" />
     </a>
   </div>
@@ -151,7 +151,7 @@ const Services = () => {
     Compassionate therapy for processing and healing from traumatic experiences, with a focus on restoring emotional well-being and building resilience.
   </p>
   <div className="flex justify-center">
-    <a href="https://www.yourdictionary.com/articles/basic-psychology-terms-meanings?search=trauma+recovery" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm" target="_blank" rel="noopener noreferrer">
+    <a href="/services/trauma-recovery" className="text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 text-xs sm:text-sm">
       Learn more <FaArrowRight className="text-xs sm:text-sm" />
     </a>
   </div>
