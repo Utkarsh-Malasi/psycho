@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Header from './Header'
 import logo from '../images/l2.jpg'
 import { FaPhone, FaEnvelope, FaArrowRight, FaQuoteLeft, FaQuoteRight, FaStar, FaHeart } from 'react-icons/fa'
 const Home = () => {
@@ -9,8 +8,8 @@ const Home = () => {
   const testimonials = [
     {
       text: "The therapy sessions at Rekhmanottam completely transformed my approach to mental health. I feel more empowered and balanced than ever before.",
-      author: "Anonymous",
-      rating: 5
+      author: "Confidential",
+      rating: 3
     },
     {
       text: "Rekhmanottam's compassionate approach helped me navigate through my anxiety with practical coping strategies that actually work in real life.",
@@ -20,8 +19,33 @@ const Home = () => {
     {
       text: " The personalized care here is unmatched anywhere else .",
       author: "Anonymous",
+      rating: 4
+    },
+    {
+      text: "The warmth and dedication of the staff make every moment unforgettable.",
+      author: "Anonymous",
       rating: 5
-    }
+},
+{
+      text: "Exceptional care that leaves you feeling truly valued and supported.",
+      author: "-",
+      rating: 4
+},
+{
+      text: "Every interaction reflects genuine concern and unparalleled attention to detail.",
+      author: "Confidential",
+      rating: 5
+},
+{
+      text: "The care here feels personal and heartfelt, creating a comforting experience.",
+      author: "Anonymous",
+      rating: 4
+},
+{
+      text: "An extraordinary environment where kindness and professionalism shine through.",
+      author: "-",
+      rating: 5
+}
   ];
   
   useEffect(() => {
@@ -36,15 +60,14 @@ const Home = () => {
   
   return (
     <>
-    <Header />
     <div className='relative'>
       {/* Floating Contact Button */}
       <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-50 animate-bounce">
         <a 
-          href="/contact" 
+          href="tel:+918279793224"
           className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full shadow-2xl hover:shadow-purple-300 transform transition-all duration-300 hover:scale-110"
         >
-          <FaHeart className="text-white text-xl sm:text-2xl" />
+          <FaPhone className="text-white text-xl sm:text-2xl" />
         </a>
       </div>
       
@@ -75,7 +98,31 @@ const Home = () => {
      </div>
    </div>
 
-
+   {/* Special Offer Section - Moved to top for better visibility */}
+   <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-white relative overflow-hidden my-6 sm:my-8 md:my-10 mx-auto max-w-3xl">
+     <div className="absolute -right-12 -top-12 w-24 h-24 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
+     <div className="absolute -left-12 -bottom-12 w-24 h-24 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+     
+     <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white flex items-center justify-center">
+       <FaHeart className="mr-2 text-pink-200 animate-pulse" />
+       Special Offer
+     </h2>
+     
+     <div className="bg-white bg-opacity-95 p-4 sm:p-6 rounded-lg shadow-inner mb-4">
+       <h3 className="text-xl sm:text-2xl font-semibold text-center text-purple-800 mb-2">FREE 10-Minute Consultation Call</h3>
+       <p className="text-gray-700 text-center mb-4 text-base sm:text-lg">
+         Take the first step toward your mental well-being journey. Connect with our experts for a complimentary 10-minute consultation to discuss your needs.
+       </p>
+       <div className="flex justify-center">
+         <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform transition-all duration-300 hover:scale-110 text-lg">
+           <FaArrowRight className="mr-2 animate-bounce" />
+           BOOK NOW
+         </a>
+       </div>
+     </div>
+     
+     <p className="text-white text-center text-sm italic">*Limited time offer. Subject to availability.</p>
+   </div>
     <div className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 bg-white rounded-2xl shadow-lg my-8 sm:my-10 md:my-12 mx-2 sm:mx-4 border border-purple-100 hover:shadow-xl transition-all duration-300">
   <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4 sm:mb-6 md:mb-8"></div>
   <p className="bodyFont text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed text-center max-w-4xl">
@@ -84,7 +131,7 @@ const Home = () => {
     Self-love and care are not luxuries—they are vital necessities. At Rekhmanottam, we wholeheartedly believe that
     choosing yourself and prioritizing your mental health is the <span className="font-semibold text-purple-700">most important decision</span> you can make.
   </p>
-  <a href="/services" className="mt-6 sm:mt-8 text-base sm:text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2">
+  <a href="#services" className="mt-6 sm:mt-8 text-base sm:text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2">
     Learn more about our therapy services <FaArrowRight className="animate-pulse" />
   </a>
 </div>
@@ -117,33 +164,6 @@ const Home = () => {
       </div>
     ))}
   </div>
-</div>
-
-{/* Special Offer Section */}
-<div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-102 border-2 border-white relative overflow-hidden my-8 sm:my-10 md:my-12 mx-2 sm:mx-4">
-  <div className="absolute -right-12 -top-12 w-24 h-24 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-  <div className="absolute -left-12 -bottom-12 w-24 h-24 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
-  
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white flex items-center justify-center">
-    <FaHeart className="mr-2 text-pink-200 animate-pulse" />
-    Special Offer
-  </h2>
-  
-  <div className="bg-white bg-opacity-90 p-4 rounded-lg shadow-inner mb-4">
-    <h3 className="text-xl font-semibold text-center text-purple-800 mb-2">FREE 10-Minute Consultation Call</h3>
-    <p className="text-gray-700 text-center mb-3">
-      Take the first step toward your mental well-being journey. Connect with our experts for a complimentary 10-minute consultation to discuss your needs.
-    </p>
-    <div className="flex justify-center">
-      <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full font-bold hover:shadow-lg transform transition-all duration-300 hover:scale-105">
-        <FaArrowRight className="mr-2 animate-bounce" />
-        BOOK NOW
-      </a>
-    </div>
-  </div>
-  
-  <p className="text-white text-center text-sm italic">*Limited time offer. Subject to availability.</p>
-</div>
   
   <div className="flex justify-center mt-4">
     {testimonials.map((_, index) => (
@@ -156,9 +176,9 @@ const Home = () => {
   </div>
 </div>
   
-  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center my-8 sm:my-10 md:my-12 px-4">
+<div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center my-8 sm:my-10 md:my-12 px-4">
   <a 
-    href="/contact" 
+    href="#contact" 
     className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 sm:py-4 md:py-5 px-6 sm:px-8 md:px-10 rounded-full shadow-xl transform transition-all duration-300 hover:scale-110 flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg group"
   >
     Book a Session <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -177,9 +197,9 @@ const Home = () => {
   </a>
 </div>
       </div>
-  
+  </div>
     </>
   )
 }
 
-export default Home
+export default Home;

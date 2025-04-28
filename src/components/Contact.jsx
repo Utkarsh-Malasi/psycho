@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Header from './Header'
-import { FaMapMarkerAlt, FaAddressBook, FaPhone, FaEnvelope, FaClock, FaArrowRight, FaHeart } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaAddressBook, FaPhone, FaEnvelope, FaClock, FaArrowRight, FaHeart, FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   
@@ -10,7 +9,6 @@ const Contact = () => {
   
   return (
     <>
-    <Header />
       
     <div className="min-h-screen mt-4 bg-gradient-to-br from-white via-blue-50 to-purple-50 px-4 py-6 sm:py-8 rounded-xl shadow-xl">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center py-6 sm:py-8 px-4 bg-white rounded-lg max-w-4xl mx-auto shadow-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600">We Believe In Connecting Yourself With The Better You</h1>
@@ -38,16 +36,32 @@ const Contact = () => {
                 <div className="bg-purple-50 p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100">
                   <h3 className="text-lg font-semibold mb-2 sm:mb-3 text-purple-800 flex items-center">
                     <FaAddressBook className="mr-2 sm:mr-3 text-purple-600" />
-                    Contact Info
+                    Contact With Us
                   </h3>
-                  <div className="text-gray-700 text-sm sm:text-base md:text-lg pl-6 sm:pl-9 space-y-3 sm:space-y-4">
-                    <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 w-fit">
-                      <FaPhone className="mr-2 sm:mr-3 animate-pulse" />
-                      Call Us: +91 8279793224
+                  <div className="flex flex-wrap gap-3 pl-6 sm:pl-9">
+                    <a href="tel:+918279793224" className="flex items-center bg-gradient-to-r from-green-600 to-teal-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                      <FaPhone className="mr-2 sm:mr-3" />
+                      Call Now: +91 8279793224
                     </a>
-                    <a href="mailto:rekhmanottam@gmail.com" className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 w-fit">
+                    <a href="mailto:contact@rekhmanottam.com" className="flex items-center bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
                       <FaEnvelope className="mr-2 sm:mr-3" />
-                      Email Us: rekhmanottam@gmail.com
+                      Email Us
+                    </a>
+                    <a href="https://instagram.com/rekhmanottam" target="_blank" rel="noopener noreferrer" className="flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                      <FaInstagram className="mr-2 sm:mr-3" />
+                      Instagram
+                    </a>
+                    <a href="https://facebook.com/rekhmanottam" target="_blank" rel="noopener noreferrer" className="flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                      <FaFacebook className="mr-2 sm:mr-3" />
+                      Facebook
+                    </a>
+                    <a href="https://twitter.com/rekhmanottam" target="_blank" rel="noopener noreferrer" className="flex items-center bg-gradient-to-r from-blue-400 to-blue-600 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                      <FaTwitter className="mr-2 sm:mr-3" />
+                      Twitter
+                    </a>
+                    <a href="https://linkedin.com/company/rekhmanottam" target="_blank" rel="noopener noreferrer" className="flex items-center bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 sm:px-5 py-2 sm:py-3 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105">
+                      <FaLinkedin className="mr-2 sm:mr-3" />
+                      LinkedIn
                     </a>
                   </div>
                 </div>

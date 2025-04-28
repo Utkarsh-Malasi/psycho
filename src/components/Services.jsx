@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Header from './Header'
 import { FaUserMd, FaUsers, FaBriefcase, FaChild, FaCogs, FaLightbulb, FaLeaf, FaHeartbeat, FaFistRaised, FaHandshake, FaHeart, FaSchool, FaArrowRight } from 'react-icons/fa'
 
 const Services = () => {
@@ -11,7 +10,6 @@ const Services = () => {
   
   return (
   <>
-  <Header />
     <div className="container mx-auto px-4 py-6 sm:py-8 mt-4 bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-xl shadow-xl">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 p-2 sm:p-4">Our Services</h1>
       
@@ -186,7 +184,7 @@ const Services = () => {
           <p className="text-white text-center text-sm italic">*Limited time offer. Subject to availability.</p>
         </div>
         
-        <a href="/contact" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 text-base sm:text-lg font-medium flex items-center gap-2 mx-auto">
+        <a href="#contact" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:shadow-lg transform transition-all duration-300 hover:scale-105 text-base sm:text-lg font-medium flex items-center gap-2 mx-auto">
           <FaHeart className="text-white" /> Book Your Session Today
         </a>
         <p className="text-gray-700 mt-4 sm:mt-6 text-sm sm:text-base italic">Your journey to emotional well-being begins with a single step</p>

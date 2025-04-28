@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import founderImageJpg from '../images/founder.jpg'
 import founderImageWebp from '../images/founder.webp' // Modern image format for better performance
-import Header from './Header'
 import { FaAward, FaCertificate, FaBrain, FaUsers, FaHandHoldingHeart, FaGraduationCap, FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 
 export default function About() {
@@ -13,7 +12,6 @@ export default function About() {
   
   return (
     <>
-    <Header/>
     <div className="container mx-auto px-4 py-6 sm:py-8 mt-4 bg-gradient-to-br from-white via-blue-50 to-purple-50 rounded-xl shadow-xl">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-600 p-2 sm:p-4">About Us</h1>
       <div className="max-w-3xl mx-auto">
